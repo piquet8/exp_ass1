@@ -21,7 +21,7 @@ For this project I've implemented 4 nodes: the main node that simulates our robo
 * Inside of the [oracle.py](https://github.com/piquet8/exp_ass1/blob/master/scripts/oracle.py) script there is the `/Check_id` service: it provides a boolean value. Request/reply interactions are done via a service file [Check_id.srv](https://github.com/piquet8/exp_ass1/blob/master/srv/Check_id.srv) which has an empty request field and  a boolean response field. When the robot calls this service the oracle node check if the ID found is the winning ID
 * Inside of the [move_to_room.py](https://github.com/piquet8/exp_ass1/blob/master/scripts/move_to_room.py) script there is the `/Change_room` service: it provides a boolean value. Request/reply interactions are done via a service file [Move_to_room.srv]https://github.com/piquet8/exp_ass1/blob/master/srv/Move_to_room.srv which has an empty request field and a boolean response field. When the robot calls this service the move_to_room node takes the target position and sends a boolean value True.
 ## Parameters
-They are inside of the assignment.launch and are:
+They are inside of the [ass1_exprob.launch](https://github.com/piquet8/exp_ass1/blob/master/launch/ass1_exprob.launch) and are:
 - `state` for the individuation of the current state of the robot, it can be 0 or 1
 - `ID` is the value identifying of the hypothesis 
 - `WHO` is the value of the person of the hypothesis
@@ -29,4 +29,46 @@ They are inside of the assignment.launch and are:
 - `WHERE` is the value of the place of the hypothesis
 - `room_x` for memorize the coordiantes x of the target that the robot have to reach
 - `room_y` for memorize the coordiantes y of the target that the robot have to reach
+## Rqt-graph
+Here we can see the graphs showing what's going on in the system, the first with Nodes only and the second with Nosdes and Topic:
+![Rqt-graph](https://github.com/piquet8/exp_ass1/blob/master/rqt_graph/rqt_graph_1.png) 
+![Rqt-graph](https://github.com/piquet8/exp_ass1/blob/master/rqt_graph/rqt_graph_2.png)
+# How to launch
+1. Firstly, open the terminal, go to your workspace and in the src folder run:
+```
+git clone https://github.com/piquet8/exp_ass1.git
+```
+**Remember** that python files must be made executable before they are run, to do this, go to the directory of the file and use: `chmod +x file_name.py`
+
+2. Then to launch the program open a new shell tab and run the command:
+```
+roslaunch exp_ass1 ass1_exprob.launch
+```
+## Screenshot of the running programme
+Here some screenshots showing the relevant parts of the running code:
+![launch](https://github.com/piquet8/exp_ass1/blob/master/screenshots/1_launch.png) 
+
+commento
+
+![nodes_start](https://github.com/piquet8/exp_ass1/blob/master/screenshots/2_nodes%20start.png) 
+
+commento
+
+![cluedo_rules](https://github.com/piquet8/exp_ass1/blob/master/screenshots/3_cluedo%20rules.png)
+
+commento
+
+![search](https://github.com/piquet8/exp_ass1/blob/master/screenshots/4_search_behavior.png)
+
+commento
+
+![wrong](https://github.com/piquet8/exp_ass1/blob/master/screenshots/5_wrong_hypothesis.png)
+
+commento
+
+![winner](https://github.com/piquet8/exp_ass1/blob/master/screenshots/6_right_hypothesis.png)
+
+
+
+
 
