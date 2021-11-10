@@ -1,0 +1,344 @@
+\hypertarget{hint_8py}{}\doxysection{scripts/hint.py File Reference}
+\label{hint_8py}\index{scripts/hint.py@{scripts/hint.py}}
+
+
+This program simulate ch.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{hint_8py_ad887cc2c8ef099d1a2f62493384f5b58}{hint.\+load\+\_\+file}} ()
+\begin{DoxyCompactList}\small\item\em This function loads the ontology from a file called cluedo\+\_\+ontology in a specific. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{hint_8py_a65a07b6fae4f2065d656efa40955d595}{hint.\+add\+\_\+instance}} (name, class\+\_\+type)
+\begin{DoxyCompactList}\small\item\em This function adds one entity to the ontology. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{hint_8py_ae532f0e02a88a18cd9e851c04732eb16}{hint.\+find\+\_\+type}} (class\+\_\+type)
+\begin{DoxyCompactList}\small\item\em This function checks the type of the class among who, what and where and returns \# the string with the corresponding class name. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{hint_8py_a3a31721e8485ee2dca39efe7eb30a701}{hint.\+reason}} ()
+\begin{DoxyCompactList}\small\item\em This function calls the armor server in order to run the reasoner. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{hint_8py_a7d6ba1eabaffacb07969fbc768c90c10}{hint.\+disjoint}} (class\+\_\+type)
+\begin{DoxyCompactList}\small\item\em This function calls the armor server and by sending specific commands it specifies that all entities inside the class passed as parameter are disjoint and different ~\newline
+ \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{hint_8py_a7ed022754fc272803028e27cd9c0bfe0}{hint.\+clean\+\_\+queries}} (query)
+\begin{DoxyCompactList}\small\item\em This function, for each element of the list passed as input it splits the strings. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{hint_8py_a674637b455220e1abe27776bbde0f90e}{hint.\+check\+\_\+if\+\_\+received\+\_\+before}} (data)
+\begin{DoxyCompactList}\small\item\em In this function, depending on the type of string that has been received, it checks in the corresponding global list if already present. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{hint_8py_a1cf079b83d39f1602583fcd16d2407f6}{hint.\+add\+\_\+hypothesis}} (ID, class\+\_\+type, name)
+\begin{DoxyCompactList}\small\item\em This function adds an entity to a given hypothesis. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{hint_8py_a83944d7adc43c91f1a1db5891722bdeb}{hint.\+look\+\_\+hypothesis}} (ID, class\+\_\+type)
+\begin{DoxyCompactList}\small\item\em This funciton calls the armor server to see in a given hypothesis identified by \# its ID. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{hint_8py_a19896eb61dbad6b575be29d116b3fbbb}{hint.\+check\+\_\+in\+\_\+ontology}} (ID, class\+\_\+type, name)
+\begin{DoxyCompactList}\small\item\em This function checks if a hint is already present in an hypothesis. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{hint_8py_af774dea2d7f107299a9331d85dccf5ec}{hint.\+check\+\_\+complete\+\_\+consistent}} (ID)
+\begin{DoxyCompactList}\small\item\em This function calls the armor server twice. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{hint_8py_a19dff45f6645e6904566e590d517aa83}{hint.\+send\+\_\+hint}} (msg)
+\begin{DoxyCompactList}\small\item\em This function is called when new hint arrived. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{hint_8py_a4496d27ddd8e8d71c4cca5eacacfb14d}{hint.\+main}} ()
+\begin{DoxyCompactList}\small\item\em This function implements the ros node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{hint_8py_aed2e9e74752eb801112581662e9e19cc}\label{hint_8py_aed2e9e74752eb801112581662e9e19cc}} 
+{\bfseries hint.\+armor\+\_\+service} = None
+\item 
+\mbox{\Hypertarget{hint_8py_a6434374bd1bda0b89acdcec51367d0ad}\label{hint_8py_a6434374bd1bda0b89acdcec51367d0ad}} 
+{\bfseries hint.\+pub} = None
+\item 
+\mbox{\Hypertarget{hint_8py_a7cf5b84e59c775835e056dee2e16c86c}\label{hint_8py_a7cf5b84e59c775835e056dee2e16c86c}} 
+list {\bfseries hint.\+people} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{hint_8py_aa6e326e38f472b42d71367a1695b3732}\label{hint_8py_aa6e326e38f472b42d71367a1695b3732}} 
+list {\bfseries hint.\+weapons} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{hint_8py_a2465aacc443549ad31dcf763285f337b}\label{hint_8py_a2465aacc443549ad31dcf763285f337b}} 
+list {\bfseries hint.\+locations} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{hint_8py_a5b54c5a33f160c1e84cc8920ccf6bff2}\label{hint_8py_a5b54c5a33f160c1e84cc8920ccf6bff2}} 
+list {\bfseries hint.\+hypothesis} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This program simulate ch. 
+
+\begin{DoxyAuthor}{Author}
+Gianluca Piquet 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+04/11/2021
+\end{DoxyDate}
+Subscribes to\+: ~\newline
+ /hint
+
+Publishes to\+: ~\newline
+ /hypotheis ~\newline
+
+
+Services\+: ~\newline
+ None
+
+Client Services\+: ~\newline
+ armor\+\_\+interface\+\_\+srv
+
+Action Services\+: ~\newline
+ None
+
+Description\+: ~\newline
+ This node receives the hints published on the topic hint from the oracle node. Then it ~\newline
+ check them\+: if the hint is not already present in the ontology it adds it. ~\newline
+ After that it checks if the hint has already been saved in the ontology, if it is the first time the hint has been received it checks if the hypothesy that correspond to that ~\newline
+ hint ID is complete and not inconsistent. In case the hypothesis is right it sends it to the robot. When one hint belongs to a hypothesis already check the node print Manage Hypothesis\+: information source with this ID already checked ~\newline
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{hint_8py_a1cf079b83d39f1602583fcd16d2407f6}\label{hint_8py_a1cf079b83d39f1602583fcd16d2407f6}} 
+\index{hint.py@{hint.py}!add\_hypothesis@{add\_hypothesis}}
+\index{add\_hypothesis@{add\_hypothesis}!hint.py@{hint.py}}
+\doxysubsubsection{\texorpdfstring{add\_hypothesis()}{add\_hypothesis()}}
+{\footnotesize\ttfamily def hint.\+add\+\_\+hypothesis (\begin{DoxyParamCaption}\item[{}]{ID,  }\item[{}]{class\+\_\+type,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+
+
+This function adds an entity to a given hypothesis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ID, id of the hypothesis that we want to add \\
+\hline
+{\em } & class\+\_\+type, type of information that we want add \\
+\hline
+{\em } & name, name of information that we want add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{hint_8py_a65a07b6fae4f2065d656efa40955d595}\label{hint_8py_a65a07b6fae4f2065d656efa40955d595}} 
+\index{hint.py@{hint.py}!add\_instance@{add\_instance}}
+\index{add\_instance@{add\_instance}!hint.py@{hint.py}}
+\doxysubsubsection{\texorpdfstring{add\_instance()}{add\_instance()}}
+{\footnotesize\ttfamily def hint.\+add\+\_\+instance (\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{class\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+This function adds one entity to the ontology. 
+
+~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em } & name is the instance name \\
+\hline
+{\em } & class\+\_\+type represent the type of the instance among who, what and where \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{hint_8py_af774dea2d7f107299a9331d85dccf5ec}\label{hint_8py_af774dea2d7f107299a9331d85dccf5ec}} 
+\index{hint.py@{hint.py}!check\_complete\_consistent@{check\_complete\_consistent}}
+\index{check\_complete\_consistent@{check\_complete\_consistent}!hint.py@{hint.py}}
+\doxysubsubsection{\texorpdfstring{check\_complete\_consistent()}{check\_complete\_consistent()}}
+{\footnotesize\ttfamily def hint.\+check\+\_\+complete\+\_\+consistent (\begin{DoxyParamCaption}\item[{}]{ID }\end{DoxyParamCaption})}
+
+
+
+This function calls the armor server twice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ID, hypothesis identifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: 1 if hypothesi complete and consistent 0 if not
+\end{DoxyReturn}
+This function calls the armor server twice, the first time it retrieves all the complete hypothesis and it checks if the searched hypothesis is in that list, it then does the same to check if the hypothesis is inconsistent. \mbox{\Hypertarget{hint_8py_a674637b455220e1abe27776bbde0f90e}\label{hint_8py_a674637b455220e1abe27776bbde0f90e}} 
+\index{hint.py@{hint.py}!check\_if\_received\_before@{check\_if\_received\_before}}
+\index{check\_if\_received\_before@{check\_if\_received\_before}!hint.py@{hint.py}}
+\doxysubsubsection{\texorpdfstring{check\_if\_received\_before()}{check\_if\_received\_before()}}
+{\footnotesize\ttfamily def hint.\+check\+\_\+if\+\_\+received\+\_\+before (\begin{DoxyParamCaption}\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+In this function, depending on the type of string that has been received, it checks in the corresponding global list if already present. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & data, list that want to check if already received \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: find
+\end{DoxyReturn}
+In this function, depending on the type of string that has been received, it checks in the corresponding global list if already present. In case it then it at the end. ~\newline
+ \mbox{\Hypertarget{hint_8py_a19896eb61dbad6b575be29d116b3fbbb}\label{hint_8py_a19896eb61dbad6b575be29d116b3fbbb}} 
+\index{hint.py@{hint.py}!check\_in\_ontology@{check\_in\_ontology}}
+\index{check\_in\_ontology@{check\_in\_ontology}!hint.py@{hint.py}}
+\doxysubsubsection{\texorpdfstring{check\_in\_ontology()}{check\_in\_ontology()}}
+{\footnotesize\ttfamily def hint.\+check\+\_\+in\+\_\+ontology (\begin{DoxyParamCaption}\item[{}]{ID,  }\item[{}]{class\+\_\+type,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+
+
+This function checks if a hint is already present in an hypothesis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ID, id of the hypothesis that we want to check \\
+\hline
+{\em } & class\+\_\+type, type of information that we want to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: None
+\end{DoxyReturn}
+This function checks if a hint is already present in an hypothesis. If case it adds it to the \# ontology. \mbox{\Hypertarget{hint_8py_a7ed022754fc272803028e27cd9c0bfe0}\label{hint_8py_a7ed022754fc272803028e27cd9c0bfe0}} 
+\index{hint.py@{hint.py}!clean\_queries@{clean\_queries}}
+\index{clean\_queries@{clean\_queries}!hint.py@{hint.py}}
+\doxysubsubsection{\texorpdfstring{clean\_queries()}{clean\_queries()}}
+{\footnotesize\ttfamily def hint.\+clean\+\_\+queries (\begin{DoxyParamCaption}\item[{}]{query }\end{DoxyParamCaption})}
+
+
+
+This function, for each element of the list passed as input it splits the strings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & query , list of strings that we want clean \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: query, query after clean
+\end{DoxyReturn}
+This function, for each element of the list passed as input it splits the strings at the char \textquotesingle{}\#\textquotesingle{} and takes only what is after. Then it removes the last element of the remaing string. \mbox{\Hypertarget{hint_8py_a7d6ba1eabaffacb07969fbc768c90c10}\label{hint_8py_a7d6ba1eabaffacb07969fbc768c90c10}} 
+\index{hint.py@{hint.py}!disjoint@{disjoint}}
+\index{disjoint@{disjoint}!hint.py@{hint.py}}
+\doxysubsubsection{\texorpdfstring{disjoint()}{disjoint()}}
+{\footnotesize\ttfamily def hint.\+disjoint (\begin{DoxyParamCaption}\item[{}]{class\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+This function calls the armor server and by sending specific commands it specifies that all entities inside the class passed as parameter are disjoint and different ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & class type of element that I want disjoint \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{hint_8py_ae532f0e02a88a18cd9e851c04732eb16}\label{hint_8py_ae532f0e02a88a18cd9e851c04732eb16}} 
+\index{hint.py@{hint.py}!find\_type@{find\_type}}
+\index{find\_type@{find\_type}!hint.py@{hint.py}}
+\doxysubsubsection{\texorpdfstring{find\_type()}{find\_type()}}
+{\footnotesize\ttfamily def hint.\+find\+\_\+type (\begin{DoxyParamCaption}\item[{}]{class\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+This function checks the type of the class among who, what and where and returns \# the string with the corresponding class name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & class\+\_\+type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: class name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{hint_8py_ad887cc2c8ef099d1a2f62493384f5b58}\label{hint_8py_ad887cc2c8ef099d1a2f62493384f5b58}} 
+\index{hint.py@{hint.py}!load\_file@{load\_file}}
+\index{load\_file@{load\_file}!hint.py@{hint.py}}
+\doxysubsubsection{\texorpdfstring{load\_file()}{load\_file()}}
+{\footnotesize\ttfamily def hint.\+load\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function loads the ontology from a file called cluedo\+\_\+ontology in a specific. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & None \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{hint_8py_a83944d7adc43c91f1a1db5891722bdeb}\label{hint_8py_a83944d7adc43c91f1a1db5891722bdeb}} 
+\index{hint.py@{hint.py}!look\_hypothesis@{look\_hypothesis}}
+\index{look\_hypothesis@{look\_hypothesis}!hint.py@{hint.py}}
+\doxysubsubsection{\texorpdfstring{look\_hypothesis()}{look\_hypothesis()}}
+{\footnotesize\ttfamily def hint.\+look\+\_\+hypothesis (\begin{DoxyParamCaption}\item[{}]{ID,  }\item[{}]{class\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+This funciton calls the armor server to see in a given hypothesis identified by \# its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & ID, id of the hypothesis that we want to check \\
+\hline
+{\em } & class\+\_\+type, type of information that we want to retreieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: res\+\_\+final, name of entity retrieved 
+\end{DoxyReturn}
+\mbox{\Hypertarget{hint_8py_a4496d27ddd8e8d71c4cca5eacacfb14d}\label{hint_8py_a4496d27ddd8e8d71c4cca5eacacfb14d}} 
+\index{hint.py@{hint.py}!main@{main}}
+\index{main@{main}!hint.py@{hint.py}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def hint.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function implements the ros node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & None \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{hint_8py_a3a31721e8485ee2dca39efe7eb30a701}\label{hint_8py_a3a31721e8485ee2dca39efe7eb30a701}} 
+\index{hint.py@{hint.py}!reason@{reason}}
+\index{reason@{reason}!hint.py@{hint.py}}
+\doxysubsubsection{\texorpdfstring{reason()}{reason()}}
+{\footnotesize\ttfamily def hint.\+reason (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function calls the armor server in order to run the reasoner. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & None \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{hint_8py_a19dff45f6645e6904566e590d517aa83}\label{hint_8py_a19dff45f6645e6904566e590d517aa83}} 
+\index{hint.py@{hint.py}!send\_hint@{send\_hint}}
+\index{send\_hint@{send\_hint}!hint.py@{hint.py}}
+\doxysubsubsection{\texorpdfstring{send\_hint()}{send\_hint()}}
+{\footnotesize\ttfamily def hint.\+send\+\_\+hint (\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+
+
+This function is called when new hint arrived. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & msg, from topic /hint \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: None
+\end{DoxyReturn}
+This function elaborates all of the hints received and decides weather or not to make an hypothesy. If the hypothesy is complete and consistent, and if it was never published before it is sent on the topic /hypothesis as a message of type Hypothesis.\+msg, that has 4 fields each of string type\+: ID, who, what, where to the robot node 

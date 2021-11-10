@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<launch>
+
+	<arg name="state" default= "0"/>
+	
+	<arg name="ID" default= "ID1"/>
+	<arg name="WHO" default= "Rev.Green"/>
+	<arg name="WHAT" default= "knife"/>
+	<arg name="WHERE" default= "lounge"/>
+	
+	<arg name="room_x" default= "2"/>
+	<arg name="room_y" default= "2"/>
+	
+	
+	
+	
+	<param name="state" value="$(arg state)" />
+	
+	<param name="ID" value="$(arg ID)" />
+	<param name="WHO" value="$(arg WHO)" />
+	<param name="WHAT" value="$(arg WHAT)" />
+	<param name="WHERE" value="$(arg WHERE)" />
+	
+	<param name="room_x" value="$(arg room_x)" />
+	<param name="room_y" value="$(arg room_y)" />
+	
+	
+
+<node pkg="armor" type="execute" name="armor_service" args="it.emarolab.armor.ARMORMainService"/>
+   
+   <node name="robot" pkg="exp_ass1" type ="robot.py" output="screen"/>
+   
+   <node name="move_to_room"  pkg="exp_ass1" type="move_to_room.py" />
+   
+   <node name="oracle"  pkg="exp_ass1" type="oracle.py" output="screen" />
+   
+   <node name="hint"  pkg="exp_ass1" type="hint.py" output="screen"/>
+
+</launch>

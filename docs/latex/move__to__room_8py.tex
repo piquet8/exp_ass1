@@ -1,0 +1,84 @@
+\hypertarget{move__to__room_8py}{}\doxysection{scripts/move\+\_\+to\+\_\+room.py File Reference}
+\label{move__to__room_8py}\index{scripts/move\_to\_room.py@{scripts/move\_to\_room.py}}
+
+
+This program simulate the movement of the robot from a room to another one.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{move__to__room_8py_aafb2ebfce8e616a6a5f23dbbb3751d2f}{move\+\_\+to\+\_\+room.\+change\+\_\+room}} (req)
+\begin{DoxyCompactList}\small\item\em This function is called when robot receive a new target position /\+Move\+\_\+to\+\_\+room. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{move__to__room_8py_a9d4f8f298b149c22397f7fa8d014453b}{move\+\_\+to\+\_\+room.\+main}} ()
+\begin{DoxyCompactList}\small\item\em This function implements the ros node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This program simulate the movement of the robot from a room to another one. 
+
+\begin{DoxyAuthor}{Author}
+Gianluca Piquet 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+04/11/2021
+\end{DoxyDate}
+Subscribes to\+: ~\newline
+ None
+
+Publishes to\+: ~\newline
+ None ~\newline
+
+
+Services\+: ~\newline
+ /\+Move\+\_\+to\+\_\+room
+
+Client Services\+: ~\newline
+ None
+
+Action Services\+: ~\newline
+ None
+
+Description\+: ~\newline
+ This node is only a simulation of the future node for the movement of the robot among the rooms. It take the values of the target position from the parameters set from the robot and then I will implement the go\+\_\+to\+\_\+point beahviour. For the moment when it is called it take the values of the target, sleep for 5 and then send the reply that tell to the robot that it is arrived in the room 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{move__to__room_8py_aafb2ebfce8e616a6a5f23dbbb3751d2f}\label{move__to__room_8py_aafb2ebfce8e616a6a5f23dbbb3751d2f}} 
+\index{move\_to\_room.py@{move\_to\_room.py}!change\_room@{change\_room}}
+\index{change\_room@{change\_room}!move\_to\_room.py@{move\_to\_room.py}}
+\doxysubsubsection{\texorpdfstring{change\_room()}{change\_room()}}
+{\footnotesize\ttfamily def move\+\_\+to\+\_\+room.\+change\+\_\+room (\begin{DoxyParamCaption}\item[{}]{req }\end{DoxyParamCaption})}
+
+
+
+This function is called when robot receive a new target position /\+Move\+\_\+to\+\_\+room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & None \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: None
+\end{DoxyReturn}
+This function simulate the movement of the robot, it takes the value of the target and then sleep for 5, in this part I\textquotesingle{}ll put the behavior go\+\_\+to\+\_\+point. Then when the robot will be inside the room the function will send a boolean reply True \mbox{\Hypertarget{move__to__room_8py_a9d4f8f298b149c22397f7fa8d014453b}\label{move__to__room_8py_a9d4f8f298b149c22397f7fa8d014453b}} 
+\index{move\_to\_room.py@{move\_to\_room.py}!main@{main}}
+\index{main@{main}!move\_to\_room.py@{move\_to\_room.py}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def move\+\_\+to\+\_\+room.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function implements the ros node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & None \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: None 
+\end{DoxyReturn}

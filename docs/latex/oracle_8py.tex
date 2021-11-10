@@ -1,0 +1,113 @@
+\hypertarget{oracle_8py}{}\doxysection{scripts/oracle.py File Reference}
+\label{oracle_8py}\index{scripts/oracle.py@{scripts/oracle.py}}
+
+
+This program simulate the movement of the robot from a room to another one.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{oracle_8py_a10d578dc7a6e31b57c0c000612321a36}{oracle.\+send\+\_\+hints}} (msg)
+\begin{DoxyCompactList}\small\item\em This function pubblishes the hint chosed randomly on the topic /hint. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{oracle_8py_a122ad270aee5dc901258da8284e5b63a}{oracle.\+id\+\_\+winner}} (req)
+\begin{DoxyCompactList}\small\item\em This function check if the ID found by the robot is the winner and sends the result as reply. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{oracle_8py_a5ac7249c0bad890a9f43d54c5b413399}{oracle.\+main}} ()
+\begin{DoxyCompactList}\small\item\em This function implements the ros node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{oracle_8py_a9dc97fa484859568dc4a23547ce1b3d8}\label{oracle_8py_a9dc97fa484859568dc4a23547ce1b3d8}} 
+list {\bfseries oracle.\+hints} = \mbox{[}\textquotesingle{}I\+D1\+:where\+:\+Conservatory\textquotesingle{}, \textquotesingle{}I\+D1\+:what\+:\+Dagger\textquotesingle{},\textquotesingle{}I\+D1\+:where\+:\+Kitchen\textquotesingle{},\textquotesingle{}I\+D2\+:who\+:\+Prof.\+Plum\textquotesingle{}, \textquotesingle{}I\+D2\+:what\+:\+Spanner\textquotesingle{},\textquotesingle{}I\+D2\+:where\+:\+Hall\textquotesingle{},\textquotesingle{}I\+D3\+:where\+:\+Lounge\textquotesingle{}, \textquotesingle{}I\+D3\+:what\+:\+Revolver\textquotesingle{}, \textquotesingle{}I\+D3\+:who\+:\+Miss.\+Scarlett\textquotesingle{},\textquotesingle{}I\+D4\+:where\+:\+Library\textquotesingle{},\textquotesingle{}I\+D4\+:what\+:\+Candlestic\textquotesingle{},\textquotesingle{}I\+D4\+:who\+:\+Rev.\+Green\textquotesingle{},\textquotesingle{}I\+D5\+:what\+:\+Rope\textquotesingle{},\textquotesingle{}I\+D5\+:who\+:\+Col.\+Mustard\textquotesingle{}, \textquotesingle{}I\+D5\+:who\+:\+Mrs,Peacock\textquotesingle{}\mbox{]}
+\item 
+\mbox{\Hypertarget{oracle_8py_aef7fc25c988c865e622f647710b769f6}\label{oracle_8py_aef7fc25c988c865e622f647710b769f6}} 
+string {\bfseries oracle.\+id\+\_\+win} = \textquotesingle{}I\+D3\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This program simulate the movement of the robot from a room to another one. 
+
+\begin{DoxyAuthor}{Author}
+Gianluca Piquet 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+04/11/2021
+\end{DoxyDate}
+Subscribes to\+: ~\newline
+ /reach
+
+Publishes to\+: ~\newline
+ /hint ~\newline
+
+
+Services\+: ~\newline
+ /\+Check\+\_\+id
+
+Client Services\+: ~\newline
+ None
+
+Action Services\+: ~\newline
+ None
+
+Description\+: ~\newline
+ This node is the Oracle, it implements two important function, the function sed\+\_\+hints that sends random hint to the node hint that upload and check them in the ontology, the function id\+\_\+winner instead check if the hypothesis that the robot found is the correct one. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{oracle_8py_a122ad270aee5dc901258da8284e5b63a}\label{oracle_8py_a122ad270aee5dc901258da8284e5b63a}} 
+\index{oracle.py@{oracle.py}!id\_winner@{id\_winner}}
+\index{id\_winner@{id\_winner}!oracle.py@{oracle.py}}
+\doxysubsubsection{\texorpdfstring{id\_winner()}{id\_winner()}}
+{\footnotesize\ttfamily def oracle.\+id\+\_\+winner (\begin{DoxyParamCaption}\item[{}]{req }\end{DoxyParamCaption})}
+
+
+
+This function check if the ID found by the robot is the winner and sends the result as reply. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & req, request from the node robot that call this server \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: resp, contains a boolean value True if the ID is the winner
+\end{DoxyReturn}
+This function take the value of the ID hypothesis found by the robot and check if the valure is the same of the id\+\_\+win, the id of our winning hypothesis. If the value is the same it sends to the robot a reply with a boolean reault True, if is wrong it sends the result False \mbox{\Hypertarget{oracle_8py_a5ac7249c0bad890a9f43d54c5b413399}\label{oracle_8py_a5ac7249c0bad890a9f43d54c5b413399}} 
+\index{oracle.py@{oracle.py}!main@{main}}
+\index{main@{main}!oracle.py@{oracle.py}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def oracle.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function implements the ros node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & None \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: None
+\end{DoxyReturn}
+This function initialises the node, the subscriber for the topic /reach and the service / Check\+\_\+id \mbox{\Hypertarget{oracle_8py_a10d578dc7a6e31b57c0c000612321a36}\label{oracle_8py_a10d578dc7a6e31b57c0c000612321a36}} 
+\index{oracle.py@{oracle.py}!send\_hints@{send\_hints}}
+\index{send\_hints@{send\_hints}!oracle.py@{oracle.py}}
+\doxysubsubsection{\texorpdfstring{send\_hints()}{send\_hints()}}
+{\footnotesize\ttfamily def oracle.\+send\+\_\+hints (\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+
+
+This function pubblishes the hint chosed randomly on the topic /hint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & msg, the data that the orcle publish on the topic /hint for the hint node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: None 
+\end{DoxyReturn}

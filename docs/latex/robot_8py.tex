@@ -1,0 +1,101 @@
+\hypertarget{robot_8py}{}\doxysection{scripts/robot.py File Reference}
+\label{robot_8py}\index{scripts/robot.py@{scripts/robot.py}}
+
+
+This program simulate the behavior of the robot during the game.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{robot_8py_ab01f192b3555e4f00f93abcd253d5d8e}{robot.\+main}} ()
+\begin{DoxyCompactList}\small\item\em This function implements the ros node. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{robot_8py_a9f84918f4b32b806205f798d504c35f4}{robot.\+hypothesis\+\_\+check}} (hypothesis)
+\begin{DoxyCompactList}\small\item\em This function set the values of the hint inside the parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{robot_8py_a7c019a6ed14b110dab671d78d90c9090}\label{robot_8py_a7c019a6ed14b110dab671d78d90c9090}} 
+int {\bfseries robot.\+oracle\+\_\+position\+\_\+x} = 7
+\item 
+\mbox{\Hypertarget{robot_8py_ad3574664099c321e3b322b0d7f869e03}\label{robot_8py_ad3574664099c321e3b322b0d7f869e03}} 
+int {\bfseries robot.\+oracle\+\_\+position\+\_\+y} = 7
+\item 
+\mbox{\Hypertarget{robot_8py_a48c449280cb38f252e5eae45305fe803}\label{robot_8py_a48c449280cb38f252e5eae45305fe803}} 
+int {\bfseries robot.\+state} = 0
+\item 
+\mbox{\Hypertarget{robot_8py_a6dcf6216e01c73d4e937e7a593025570}\label{robot_8py_a6dcf6216e01c73d4e937e7a593025570}} 
+list {\bfseries robot.\+x\+\_\+targ} = \mbox{[} 2 , 4 , 7\mbox{]}
+\item 
+\mbox{\Hypertarget{robot_8py_a1acd009eabeac31ee87c42210cc8a476}\label{robot_8py_a1acd009eabeac31ee87c42210cc8a476}} 
+list {\bfseries robot.\+y\+\_\+targ} = \mbox{[} 2 , 4\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This program simulate the behavior of the robot during the game. 
+
+\begin{DoxyAuthor}{Author}
+Gianluca Piquet 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+04/11/2021
+\end{DoxyDate}
+Subscribes to\+: ~\newline
+ /hypothesis
+
+Publishes to\+: ~\newline
+ /reach ~\newline
+
+
+Services\+: ~\newline
+ None
+
+Client Services\+: ~\newline
+ /\+Change\+\_\+room Client Services\+: ~\newline
+ /\+Check\+\_\+id
+
+Action Services\+: ~\newline
+ None
+
+Description\+: ~\newline
+ This node is the main, it implements the two behavior of the robot, in the first behavior the robot goes around the room to find new hints, in the second behavior it goes to the oracle with its hypothesis and check if it is the right one. If it\textquotesingle{}s right it tells to us the final sentence instead if is wrong it start again with the first behavior. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{robot_8py_a9f84918f4b32b806205f798d504c35f4}\label{robot_8py_a9f84918f4b32b806205f798d504c35f4}} 
+\index{robot.py@{robot.py}!hypothesis\_check@{hypothesis\_check}}
+\index{hypothesis\_check@{hypothesis\_check}!robot.py@{robot.py}}
+\doxysubsubsection{\texorpdfstring{hypothesis\_check()}{hypothesis\_check()}}
+{\footnotesize\ttfamily def robot.\+hypothesis\+\_\+check (\begin{DoxyParamCaption}\item[{}]{hypothesis }\end{DoxyParamCaption})}
+
+
+
+This function set the values of the hint inside the parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & hypothesis \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+: the four values of the hypothesis 
+\end{DoxyReturn}
+\mbox{\Hypertarget{robot_8py_ab01f192b3555e4f00f93abcd253d5d8e}\label{robot_8py_ab01f192b3555e4f00f93abcd253d5d8e}} 
+\index{robot.py@{robot.py}!main@{main}}
+\index{main@{main}!robot.py@{robot.py}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def robot.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function implements the ros node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & None\\
+\hline
+\end{DoxyParams}
+This function implements the two behaviors of the robot, in the first part it initialises the publisher for the topic /reach and the subscriber for the topic /hypothesis. Then it asks for the current state to the parameters and if state is 1 starts with the first behaviour. Set the position for the room then asks to the service /\+Change\+\_\+room if the robot is in the nwe room when it happen it publish on the topic /reach. When the robot have a complete and consistent hypothesis, it goes to the oracle again set the position in the same way as before and send a request to the service /\+Check\+\_\+id to ask if the hypothesis is the right one. 

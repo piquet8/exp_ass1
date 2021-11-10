@@ -1,0 +1,225 @@
+\hypertarget{namespacehint}{}\doxysection{hint Namespace Reference}
+\label{namespacehint}\index{hint@{hint}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacehint_ad887cc2c8ef099d1a2f62493384f5b58}{load\+\_\+file}} ()
+\begin{DoxyCompactList}\small\item\em Documentation fot the load\+\_\+file function. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacehint_a65a07b6fae4f2065d656efa40955d595}{add\+\_\+instance}} (name, class\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Documentation fot the add\+\_\+instance function. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacehint_ae532f0e02a88a18cd9e851c04732eb16}{find\+\_\+type}} (class\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Documentation fot the find\+\_\+type function. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacehint_a3a31721e8485ee2dca39efe7eb30a701}{reason}} ()
+\begin{DoxyCompactList}\small\item\em Documentation fot the reason function. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacehint_a7d6ba1eabaffacb07969fbc768c90c10}{disjoint}} (class\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Documentation fot the disjoint function. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacehint_a7ed022754fc272803028e27cd9c0bfe0}{clean\+\_\+queries}} (query)
+\begin{DoxyCompactList}\small\item\em Documentation fot the clean\+\_\+queries function. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacehint_a674637b455220e1abe27776bbde0f90e}{check\+\_\+if\+\_\+received\+\_\+before}} (data)
+\begin{DoxyCompactList}\small\item\em Documentation fot the check\+\_\+if\+\_\+received\+\_\+before function. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacehint_a1cf079b83d39f1602583fcd16d2407f6}{add\+\_\+hypothesis}} (ID, class\+\_\+type, name)
+\begin{DoxyCompactList}\small\item\em Documentation fot the add\+\_\+hypothesis function. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacehint_a83944d7adc43c91f1a1db5891722bdeb}{look\+\_\+hypothesis}} (ID, class\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Documentation fot the look\+\_\+hypothesis function. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacehint_a19896eb61dbad6b575be29d116b3fbbb}{check\+\_\+in\+\_\+ontology}} (ID, class\+\_\+type, name)
+\begin{DoxyCompactList}\small\item\em Documentation fot the check\+\_\+in\+\_\+ontology function. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacehint_af774dea2d7f107299a9331d85dccf5ec}{check\+\_\+complete\+\_\+consistent}} (ID)
+\begin{DoxyCompactList}\small\item\em Documentation fot the check\+\_\+complete\+\_\+consistent function. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacehint_a19dff45f6645e6904566e590d517aa83}{send\+\_\+hint}} (msg)
+\begin{DoxyCompactList}\small\item\em Documentation fot the send\+\_\+hint function. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespacehint_a4496d27ddd8e8d71c4cca5eacacfb14d}{main}} ()
+\begin{DoxyCompactList}\small\item\em Documentation for the main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacehint_aed2e9e74752eb801112581662e9e19cc}\label{namespacehint_aed2e9e74752eb801112581662e9e19cc}} 
+{\bfseries armor\+\_\+service} = None
+\item 
+\mbox{\Hypertarget{namespacehint_a6434374bd1bda0b89acdcec51367d0ad}\label{namespacehint_a6434374bd1bda0b89acdcec51367d0ad}} 
+{\bfseries pub} = None
+\item 
+\mbox{\Hypertarget{namespacehint_a7cf5b84e59c775835e056dee2e16c86c}\label{namespacehint_a7cf5b84e59c775835e056dee2e16c86c}} 
+list {\bfseries people} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{namespacehint_aa6e326e38f472b42d71367a1695b3732}\label{namespacehint_aa6e326e38f472b42d71367a1695b3732}} 
+list {\bfseries weapons} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{namespacehint_a2465aacc443549ad31dcf763285f337b}\label{namespacehint_a2465aacc443549ad31dcf763285f337b}} 
+list {\bfseries locations} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{namespacehint_a5b54c5a33f160c1e84cc8920ccf6bff2}\label{namespacehint_a5b54c5a33f160c1e84cc8920ccf6bff2}} 
+list {\bfseries hypothesis} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Documentation for the hint module.
+
+More details.
+
+This node receives the hints published on the topic hint from the oracle node. Then it ~\newline
+ check them\+: if the hint is not already present in the ontology it adds it. ~\newline
+ After that it checks if the hint has already been saved in the ontology, if it is the first time the hint has been received it checks if the hypothesy that correspond to that ~\newline
+ hint ID is complete and not inconsistent. In case the hypothesis is right it sends it to the robot. When one hint belongs to a hypothesis already check the node print Manage Hypothesis\+: information source with this ID already checked ~\newline
+ 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacehint_a1cf079b83d39f1602583fcd16d2407f6}\label{namespacehint_a1cf079b83d39f1602583fcd16d2407f6}} 
+\index{hint@{hint}!add\_hypothesis@{add\_hypothesis}}
+\index{add\_hypothesis@{add\_hypothesis}!hint@{hint}}
+\doxysubsubsection{\texorpdfstring{add\_hypothesis()}{add\_hypothesis()}}
+{\footnotesize\ttfamily def hint.\+add\+\_\+hypothesis (\begin{DoxyParamCaption}\item[{}]{ID,  }\item[{}]{class\+\_\+type,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+
+
+Documentation fot the add\+\_\+hypothesis function. 
+
+More details.
+
+This function adds an entity to a given hypothesis. \mbox{\Hypertarget{namespacehint_a65a07b6fae4f2065d656efa40955d595}\label{namespacehint_a65a07b6fae4f2065d656efa40955d595}} 
+\index{hint@{hint}!add\_instance@{add\_instance}}
+\index{add\_instance@{add\_instance}!hint@{hint}}
+\doxysubsubsection{\texorpdfstring{add\_instance()}{add\_instance()}}
+{\footnotesize\ttfamily def hint.\+add\+\_\+instance (\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{class\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Documentation fot the add\+\_\+instance function. 
+
+More details.
+
+This function adds one entity to the ontology. ~\newline
+ \mbox{\Hypertarget{namespacehint_af774dea2d7f107299a9331d85dccf5ec}\label{namespacehint_af774dea2d7f107299a9331d85dccf5ec}} 
+\index{hint@{hint}!check\_complete\_consistent@{check\_complete\_consistent}}
+\index{check\_complete\_consistent@{check\_complete\_consistent}!hint@{hint}}
+\doxysubsubsection{\texorpdfstring{check\_complete\_consistent()}{check\_complete\_consistent()}}
+{\footnotesize\ttfamily def hint.\+check\+\_\+complete\+\_\+consistent (\begin{DoxyParamCaption}\item[{}]{ID }\end{DoxyParamCaption})}
+
+
+
+Documentation fot the check\+\_\+complete\+\_\+consistent function. 
+
+More details.
+
+This function calls the armor server twice, the first time it retrieves all the complete hypothesis and it checks if the searched hypothesis is in that list, it then does the same to check if the hypothesis is inconsistent. \mbox{\Hypertarget{namespacehint_a674637b455220e1abe27776bbde0f90e}\label{namespacehint_a674637b455220e1abe27776bbde0f90e}} 
+\index{hint@{hint}!check\_if\_received\_before@{check\_if\_received\_before}}
+\index{check\_if\_received\_before@{check\_if\_received\_before}!hint@{hint}}
+\doxysubsubsection{\texorpdfstring{check\_if\_received\_before()}{check\_if\_received\_before()}}
+{\footnotesize\ttfamily def hint.\+check\+\_\+if\+\_\+received\+\_\+before (\begin{DoxyParamCaption}\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+Documentation fot the check\+\_\+if\+\_\+received\+\_\+before function. 
+
+More details.
+
+In this function, depending on the type of string that has been received, it checks in the corresponding global list if already present. In case it then it at the end. ~\newline
+ \mbox{\Hypertarget{namespacehint_a19896eb61dbad6b575be29d116b3fbbb}\label{namespacehint_a19896eb61dbad6b575be29d116b3fbbb}} 
+\index{hint@{hint}!check\_in\_ontology@{check\_in\_ontology}}
+\index{check\_in\_ontology@{check\_in\_ontology}!hint@{hint}}
+\doxysubsubsection{\texorpdfstring{check\_in\_ontology()}{check\_in\_ontology()}}
+{\footnotesize\ttfamily def hint.\+check\+\_\+in\+\_\+ontology (\begin{DoxyParamCaption}\item[{}]{ID,  }\item[{}]{class\+\_\+type,  }\item[{}]{name }\end{DoxyParamCaption})}
+
+
+
+Documentation fot the check\+\_\+in\+\_\+ontology function. 
+
+More details.
+
+This function checks if a hint is already present in an hypothesis. If case it adds it to the \# ontology. \mbox{\Hypertarget{namespacehint_a7ed022754fc272803028e27cd9c0bfe0}\label{namespacehint_a7ed022754fc272803028e27cd9c0bfe0}} 
+\index{hint@{hint}!clean\_queries@{clean\_queries}}
+\index{clean\_queries@{clean\_queries}!hint@{hint}}
+\doxysubsubsection{\texorpdfstring{clean\_queries()}{clean\_queries()}}
+{\footnotesize\ttfamily def hint.\+clean\+\_\+queries (\begin{DoxyParamCaption}\item[{}]{query }\end{DoxyParamCaption})}
+
+
+
+Documentation fot the clean\+\_\+queries function. 
+
+More details.
+
+This function, for each element of the list passed as input it splits the strings at the char \textquotesingle{}\#\textquotesingle{} and takes only what is after. Then it removes the last element of the remaing string. \mbox{\Hypertarget{namespacehint_a7d6ba1eabaffacb07969fbc768c90c10}\label{namespacehint_a7d6ba1eabaffacb07969fbc768c90c10}} 
+\index{hint@{hint}!disjoint@{disjoint}}
+\index{disjoint@{disjoint}!hint@{hint}}
+\doxysubsubsection{\texorpdfstring{disjoint()}{disjoint()}}
+{\footnotesize\ttfamily def hint.\+disjoint (\begin{DoxyParamCaption}\item[{}]{class\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Documentation fot the disjoint function. 
+
+More details.
+
+This function calls the armor server and by sending specific commands it specifies that all entities inside the class passed as parameter are disjoint and different ~\newline
+ \mbox{\Hypertarget{namespacehint_ae532f0e02a88a18cd9e851c04732eb16}\label{namespacehint_ae532f0e02a88a18cd9e851c04732eb16}} 
+\index{hint@{hint}!find\_type@{find\_type}}
+\index{find\_type@{find\_type}!hint@{hint}}
+\doxysubsubsection{\texorpdfstring{find\_type()}{find\_type()}}
+{\footnotesize\ttfamily def hint.\+find\+\_\+type (\begin{DoxyParamCaption}\item[{}]{class\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Documentation fot the find\+\_\+type function. 
+
+More details.
+
+This function checks the type of the class among who, what and where and returns the string with the corresponding class name. \mbox{\Hypertarget{namespacehint_ad887cc2c8ef099d1a2f62493384f5b58}\label{namespacehint_ad887cc2c8ef099d1a2f62493384f5b58}} 
+\index{hint@{hint}!load\_file@{load\_file}}
+\index{load\_file@{load\_file}!hint@{hint}}
+\doxysubsubsection{\texorpdfstring{load\_file()}{load\_file()}}
+{\footnotesize\ttfamily def hint.\+load\+\_\+file (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Documentation fot the load\+\_\+file function. 
+
+More details.
+
+This function loads the ontology from a file called cluedo\+\_\+ontology in a specific \mbox{\Hypertarget{namespacehint_a83944d7adc43c91f1a1db5891722bdeb}\label{namespacehint_a83944d7adc43c91f1a1db5891722bdeb}} 
+\index{hint@{hint}!look\_hypothesis@{look\_hypothesis}}
+\index{look\_hypothesis@{look\_hypothesis}!hint@{hint}}
+\doxysubsubsection{\texorpdfstring{look\_hypothesis()}{look\_hypothesis()}}
+{\footnotesize\ttfamily def hint.\+look\+\_\+hypothesis (\begin{DoxyParamCaption}\item[{}]{ID,  }\item[{}]{class\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Documentation fot the look\+\_\+hypothesis function. 
+
+More details.
+
+This funciton calls the armor server to see in a given hypothesis identified by its ID \mbox{\Hypertarget{namespacehint_a4496d27ddd8e8d71c4cca5eacacfb14d}\label{namespacehint_a4496d27ddd8e8d71c4cca5eacacfb14d}} 
+\index{hint@{hint}!main@{main}}
+\index{main@{main}!hint@{hint}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def hint.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Documentation for the main function. 
+
+More details. \mbox{\Hypertarget{namespacehint_a3a31721e8485ee2dca39efe7eb30a701}\label{namespacehint_a3a31721e8485ee2dca39efe7eb30a701}} 
+\index{hint@{hint}!reason@{reason}}
+\index{reason@{reason}!hint@{hint}}
+\doxysubsubsection{\texorpdfstring{reason()}{reason()}}
+{\footnotesize\ttfamily def hint.\+reason (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Documentation fot the reason function. 
+
+More details.
+
+This function calls the armor server in order to run the reasoner ~\newline
+ \mbox{\Hypertarget{namespacehint_a19dff45f6645e6904566e590d517aa83}\label{namespacehint_a19dff45f6645e6904566e590d517aa83}} 
+\index{hint@{hint}!send\_hint@{send\_hint}}
+\index{send\_hint@{send\_hint}!hint@{hint}}
+\doxysubsubsection{\texorpdfstring{send\_hint()}{send\_hint()}}
+{\footnotesize\ttfamily def hint.\+send\+\_\+hint (\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+
+
+Documentation fot the send\+\_\+hint function. 
+
+More details.
+
+This function elaborates all of the hints received and decides weather or not to make an hypothesy. If the hypothesy is complete and consistent, and if it was never published before it is sent on the topic /hypothesis as a message of type Hypothesis.\+msg, that has 4 fields each of string type\+: ID, who, what, where to the robot node 
