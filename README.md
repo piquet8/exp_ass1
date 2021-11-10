@@ -46,25 +46,27 @@ roslaunch exp_ass1 ass1_exprob.launch
 ```
 ## Screenshot of the running programme
 Here some screenshots showing the relevant parts of the running code:
-![launch](https://github.com/piquet8/exp_ass1/blob/master/screenshots/1_launch.png) 
+- In these first two screenshots we simply see what happens when we launch our programme using the command roslaunch exp_ass1 exprob_ass1.launch. The parameters contained in the .launch file are shown, initially set with generic values chosen by me. Under the parameters the nodes are shown, all the nodes except the move_to_room and armor_service node have output screens so they show the terminal what they print. I chose to show all three because each of them plays an important role. Finally, we can see the rosmaster and individual nodes starting up in sequence
 
-commento
+![launch](https://github.com/piquet8/exp_ass1/blob/master/screenshots/1_launch.png) 
 
 ![nodes_start](https://github.com/piquet8/exp_ass1/blob/master/screenshots/2_nodes%20start.png) 
 
-commento
+- In this screen instead we can see the rules of the game written to inform the user of what is going to happen, this message will be displayed for a short period of time after which the robot will start to move
 
 ![cluedo_rules](https://github.com/piquet8/exp_ass1/blob/master/screenshots/3_cluedo%20rules.png)
 
-commento
+- In this screenshot we see the robot in its first possible behaviour, that is the searching for hints. As can be seen, the robot randomly chooses coordinates from the possible ones that correspond to possible rooms. So the robot goes to a room and once there finds a hint. Each time the hint is checked and handled by the hint node. The printouts that we see are of course not done all at the same time but are interspersed with the various messages and services named above
 
 ![search](https://github.com/piquet8/exp_ass1/blob/master/screenshots/4_search_behavior.png)
 
-commento
+- In this screenshot we see the robot in the second behaviour, it has received a possible valid hypothesis, so it goes to the oracle room and proposes its hypothesis.
+Since the correct hypothesis is set as ID3, obviously the oracle with the Check_id service will return a boolean False and the answer Wrong to the robot. Then the robot will resume searching fors hints and thus to the behaviour seen in the previous screenshot
 
 ![wrong](https://github.com/piquet8/exp_ass1/blob/master/screenshots/5_wrong_hypothesis.png)
 
-commento
+- In this last screenshot we see the same situation as before but this time the hypothesis found is the winning one, so the oracle will return the boolean True and tell the robot Right. 
+In this case, the script exits the loop and the programme ends.
 
 ![winner](https://github.com/piquet8/exp_ass1/blob/master/screenshots/6_right_hypothesis.png)
 
