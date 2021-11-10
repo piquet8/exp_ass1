@@ -18,15 +18,15 @@ For this project I've implemented 4 nodes: the main node that simulates our robo
 * `exp_ass1/Hint`: this message with topic **/hint** contain a string variable with name hint, the publisher is the node [oracle.py](https://github.com/piquet8/exp_ass1/blob/master/scripts/oracle.py) and the subscriber is the node [hint.py](https://github.com/piquet8/exp_ass1/blob/master/scripts/hint.py). I used this message to send with the oracle a new hint (as ID3:what:Revolver) to the hint node that checks and handles it
 * `exp_ass1/Hyp`: this message with topic **/hypothesis** contain four strings that make up the hypothesis, ID, who, what and where. The publisher is the node [hint.py](https://github.com/piquet8/exp_ass1/blob/master/scripts/hint.py) and the subscriber is the node [robot.py](https://github.com/piquet8/exp_ass1/blob/master/scripts/robot.py). I used this node to send a complete and consistent hypothesis to the robot
 ## Services
-* Inside of the [oracle.py](https://github.com/piquet8/exp_ass1/blob/master/scripts/oracle.py) script there is the **/Check_id** service: it provides a boolean value. Request/reply interactions are done via a service file [Check_id.srv](https://github.com/piquet8/exp_ass1/blob/master/srv/Check_id.srv) which has an empty request field and  a boolean response field. When the robot calls this service the oracle node check if the ID found is the winning ID
-* Inside of the [move_to_room.py](https://github.com/piquet8/exp_ass1/blob/master/scripts/move_to_room.py) script there is the **/Change_room** service: it provides a boolean value. Request/reply interactions are done via a service file [Move_to_room.srv]https://github.com/piquet8/exp_ass1/blob/master/srv/Move_to_room.srv which has an empty request field and a boolean response field. When the robot calls this service the move_to_room node takes the target position and sends a boolean value True.
+* Inside of the [oracle.py](https://github.com/piquet8/exp_ass1/blob/master/scripts/oracle.py) script there is the `/Check_id` service: it provides a boolean value. Request/reply interactions are done via a service file [Check_id.srv](https://github.com/piquet8/exp_ass1/blob/master/srv/Check_id.srv) which has an empty request field and  a boolean response field. When the robot calls this service the oracle node check if the ID found is the winning ID
+* Inside of the [move_to_room.py](https://github.com/piquet8/exp_ass1/blob/master/scripts/move_to_room.py) script there is the `/Change_room` service: it provides a boolean value. Request/reply interactions are done via a service file [Move_to_room.srv]https://github.com/piquet8/exp_ass1/blob/master/srv/Move_to_room.srv which has an empty request field and a boolean response field. When the robot calls this service the move_to_room node takes the target position and sends a boolean value True.
 ## Parameters
 They are inside of the assignment.launch and are:
 - `state` for the individuation of the current state of the robot, it can be 0 or 1
 - `ID` is the value identifying of the hypothesis 
-- 'WHO' is the value of the person of the hypothesis
-- 'WHAT' is the value of the weapon of the hypothesis
-- 'WHERE' is the value of the place of the hypothesis
-- 'room_x' for memorize the coordiantes x of the target that the robot have to reach
-- 'room_y' for memorize the coordiantes y of the target that the robot have to reach
+- `WHO` is the value of the person of the hypothesis
+- `WHAT` is the value of the weapon of the hypothesis
+- `WHERE` is the value of the place of the hypothesis
+- `room_x` for memorize the coordiantes x of the target that the robot have to reach
+- `room_y` for memorize the coordiantes y of the target that the robot have to reach
 
