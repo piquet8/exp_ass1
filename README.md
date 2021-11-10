@@ -65,6 +65,10 @@ Since the correct hypothesis is set as ID3, obviously the oracle with the Check_
 
 ![wrong](https://github.com/piquet8/exp_ass1/blob/master/screenshots/5_wrong_hypothesis.png)
 
+- I have added this screenshot, although similar to the previous one because we have an important detail, in fact here we can see that when a hypothesis has already been checked, the hint node will no longer handle the hint of that hypothesis avoiding checking one that has already been checked. This is communicated by the Mange Hypothesis: print which tells if: the hypothesis is complete or consistent, if it is not, or if it has already been checked.
+
+![wrong2](https://github.com/piquet8/exp_ass1/blob/master/screenshots/5_wrong_hypothesis2.png)
+
 - In this last screenshot we see the same situation as before but this time the hypothesis found is the winning one, so the oracle will return the boolean True and tell the robot Right. 
 In this case, the script exits the loop and the programme ends.
 
