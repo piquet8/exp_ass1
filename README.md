@@ -82,6 +82,9 @@ Since the correct hypothesis is set as ID3, obviously the oracle with the Check_
 ![winner](https://github.com/piquet8/exp_ass1/blob/master/screenshots/6_right_hypothesis.png)
 # Working hypothesis and environment
 ## System's features
+The system is very simple and fast as I have not had to implement any overly complicated behaviour. I chose to use parameters a lot because I think they will give me more flexibility in future implementations. 
+
+Since they are not directly linked to services or messages, I can set and recall them more easily and quickly, and adapt them to any future function in my opinion.
 ## System's limitations
 ## System's technical improvements
 # Authors and contacts
