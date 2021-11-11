@@ -74,10 +74,14 @@ Since the correct hypothesis is set as ID3, obviously the oracle with the Check_
 
 - In this last screenshot we see the same situation as before but this time the hypothesis found is the winning one, so the oracle will return the boolean True and tell the robot Right. 
 In this case, the script exits the loop and the programme ends.
+# Working hypothesis and environment
+## System's features
+## System's limitations
+## System's technical improvements
 
 ![winner](https://github.com/piquet8/exp_ass1/blob/master/screenshots/6_right_hypothesis.png)
+## Authors and contacts
+AUTHOR: Gianluca Piquet
 
-
-
-
+CONTACT: gianlucapiquet8@gmail.com 
 
