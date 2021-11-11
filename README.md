@@ -86,7 +86,11 @@ The system is very simple and fast as I have not had to implement any overly com
 
 Since they are not directly linked to services or messages, I can set and recall them more easily and quickly, and adapt them to any future function in my opinion.
 ## System's limitations
+As I said in the next paragraph about possible improvements, at the moment the biggest limitations are due to the lack of a real simulation of the robot and the environment. For the moment, in fact, we have a very abstract system where the behaviour of the robot and the environment are represented by several functions
 ## System's technical improvements
+Possible improvements are those that will be implemented in future assignments such as adding a real movement function to allow the robot to actually move, a simulated environment for it to move around in and a function that actually allows the robot to search and detect hints.
+
+For the moment, the only improvements I could think of would be user-accessible commands, and therefore an interface in which the user could, for example, choose when to start the robot's first behaviour and play a less passive role during the execution of the program.
 # Authors and contacts
 AUTHOR: Gianluca Piquet
 
