@@ -30,7 +30,8 @@ They are inside of the [ass1_exprob.launch](https://github.com/piquet8/exp_ass1/
 - `room_x` for memorize the coordiantes x of the target that the robot have to reach
 - `room_y` for memorize the coordiantes y of the target that the robot have to reach
 ## Rqt-graph
-Here we can see the graphs showing what's going on in the system, the first with Nodes only and the second with Nosdes and Topic:
+Here we can see the graphs showing what's going on in the system, the first with Nodes only and the second with nosdes and topic:
+
 ![Rqt-graph](https://github.com/piquet8/exp_ass1/blob/master/rqt_graph/rqt_graph_1.png) 
 ![Rqt-graph](https://github.com/piquet8/exp_ass1/blob/master/rqt_graph/rqt_graph_2.png)
 # How to launch
