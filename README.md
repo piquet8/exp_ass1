@@ -6,14 +6,13 @@ The robot should:
 - In each room, it should look around to find hints to make hypotheses
 - When a consistent hypothesis is deducible, it should go in a designed location and express it in English
 - If the hypothesis is wrong, it should keep exploring and find new hints
+## Features of the project
+- Implementation of a behavioral architecture
+- Representation of a map with suitable level of abstraction
+- Usage of the Cluedo ontology to manage hypothesis
+- Random-based generation of hints and validation of hypothesis
 # Project structure
 For this project I've implemented 4 nodes: the main node that simulates our robot behaviors [robot.py](https://github.com/piquet8/exp_ass1/blob/master/scripts/robot.py), the node that will take care of the movement of the robot between the rooms [move_to_room.py](https://github.com/piquet8/exp_ass1/blob/master/scripts/move_to_room.py), the oracle that knows all the hints and hypothesis and provides the hints to the robot during the game [oracle.py](https://github.com/piquet8/exp_ass1/blob/master/scripts/oracle.py) and finally the [hint.py](https://github.com/piquet8/exp_ass1/blob/master/scripts/hint.py) node that takes care of the communication with the ontology with the purpose of putting together the clues and deciding if they form a complete and consistent hypothesis to be sent to the robot.
-## UML
-![UML](https://github.com/piquet8/exp_ass1/blob/master/diagrams/UML.png)
-## Temporal diagram
-![Temporal_diagram](https://github.com/piquet8/exp_ass1/blob/master/diagrams/TIME_DIAGRAMS.png)
-## States diagram
-![States_diagram](https://github.com/piquet8/exp_ass1/blob/master/diagrams/STATES_DIAGRAM.png)
 ## Nodes
 - [robot.py](https://github.com/piquet8/exp_ass1/blob/master/scripts/robot.py): inside to this node I've only two functions, the main function that implement the behaviors of the robot and the finction hypothesis_check that is called when the the subscriber sub take a new hypothesis from the topic /hypothesis. But let me spent some words for the main function, inside the function I initialise the publisher for the topic /reach and the subscriber for the topic /hypothesis. Inside the while loop I take from the paramters the value of the state that can be 0 or 1. If the value is 0 the robot starts to move it inside the environment, it choses random a room and using the service move_to_room (that for the moment only takes the values of the target and after a few seconds reply to the robot node with a boolean True) it goes in the new room. When it reach the room it publish on the topic /reach and the oracle send a random hint to the hint node. It do this beahviour until the hint node, with the founding hints, finds a complete and consitent hypothesis. When it heppens the state change in 1 and the robot do the second behavior, set the new target position to the oracle room, then it reach it and it tells to the oracle its sentence, with the service /Check_id the Oracle tells to the robot if the hypothesis is the right one. If is the right one the game finishes instead if is wrong the robot starts again with the first behavior
 - [move_to_room.py](https://github.com/piquet8/exp_ass1/blob/master/scripts/move_to_room.py): inside this node I've implemented a very simple and primitive go_to_point function, for the moment this node implement the server /Change_room that received a empty request from the robot, takes the value of the target from the parameters and after a certain time reply with a boolean variable set to True
@@ -35,6 +34,12 @@ They are inside of the [ass1_exprob.launch](https://github.com/piquet8/exp_ass1/
 - `WHERE` is the value of the place of the hypothesis
 - `room_x` for memorize the coordiantes x of the target that the robot have to reach
 - `room_y` for memorize the coordiantes y of the target that the robot have to reach
+## UML
+![UML](https://github.com/piquet8/exp_ass1/blob/master/diagrams/UML.png)
+## Temporal diagram
+![Temporal_diagram](https://github.com/piquet8/exp_ass1/blob/master/diagrams/TIME_DIAGRAMS.png)
+## States diagram
+![States_diagram](https://github.com/piquet8/exp_ass1/blob/master/diagrams/STATES_DIAGRAM.png)
 ## Rqt-graph
 Here we can see the graphs showing what's going on in the system, the first with Nodes only and the second with nosdes and topic:
 
@@ -51,7 +56,7 @@ git clone https://github.com/piquet8/exp_ass1.git
 ```
 roslaunch exp_ass1 ass1_exprob.launch
 ```
-## Screenshot of the running programme
+# Screenshot of the running programme
 Here some screenshots showing the relevant parts of the running code:
 - In these first two screenshots we simply see what happens when we launch our programme using the command roslaunch exp_ass1 exprob_ass1.launch. The parameters contained in the .launch file are shown, initially set with generic values chosen by me. Under the parameters the nodes are shown, all the nodes except the move_to_room and armor_service node have output screens so they show the terminal what they print. I chose to show all three because each of them plays an important role. Finally, we can see the rosmaster and individual nodes starting up in sequence
 
@@ -72,15 +77,14 @@ Since the correct hypothesis is set as ID3, obviously the oracle with the Check_
 
 ![wrong](https://github.com/piquet8/exp_ass1/blob/master/screenshots/5_wrong_hypothesis2.png)
 
-- In this last screenshot we see the same situation as before but this time the hypothesis found is the winning one, so the oracle will return the boolean True and tell the robot Right. 
-In this case, the script exits the loop and the programme ends.
+- In this last screenshot we see the same situation as before but this time the hypothesis found is the winning one, so the oracle will return the boolean True and tell the robot Right. In this case, the script exits the loop and the programme ends.
+
+![winner](https://github.com/piquet8/exp_ass1/blob/master/screenshots/6_right_hypothesis.png)
 # Working hypothesis and environment
 ## System's features
 ## System's limitations
 ## System's technical improvements
-
-![winner](https://github.com/piquet8/exp_ass1/blob/master/screenshots/6_right_hypothesis.png)
-## Authors and contacts
+# Authors and contacts
 AUTHOR: Gianluca Piquet
 
 CONTACT: gianlucapiquet8@gmail.com 
