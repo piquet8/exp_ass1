@@ -78,7 +78,7 @@ Here some screenshots showing the relevant parts of the running code:
 ![search](https://github.com/piquet8/exp_ass1/blob/master/screenshots/4_search_behavior.png)
 
 - In this screenshot we see the robot in the second behaviour, it has received a possible valid hypothesis, so it goes to the oracle room and proposes its hypothesis.
-Since the correct hypothesis is set as ID3, obviously the oracle with the Check_id service will return a boolean False and the answer Wrong to the robot. Then the robot will resume searching fors hints and thus to the behaviour seen in the previous screenshot. In this screen you can also see that here we can see that when a hypothesis has already been checked, the hint node will no longer handle the hint of that hypothesis avoiding checking one that has already been checked. This is communicated by the Mange Hypothesis: print which tells if: the hypothesis is complete or consistent, if it is not, or if it has already been checked.
+Since the correct hypothesis is set as ID3, obviously the oracle with the Check_id service will return a boolean False and the answer Wrong to the robot. Then the robot will resume searching fors hints and thus to the behaviour seen in the previous screenshot. In this screen you can also see that when a hypothesis has already been checked, the hint node will no longer handle the hint of that hypothesis avoiding checking one that has already been checked. This is communicated by the Mange Hypothesis: print which tells if: the hypothesis is complete or consistent, if it is not, or if it has already been checked.
 
 ![wrong](https://github.com/piquet8/exp_ass1/blob/master/screenshots/5_wrong_hypothesis2.png)
 
