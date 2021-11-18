@@ -96,6 +96,11 @@ As I said in the next paragraph about possible improvements, at the moment the b
 Possible improvements are those that will be implemented in future assignments such as adding a real movement function to allow the robot to actually move, a simulated environment for it to move around in and a function that actually allows the robot to search and detect hints.
 
 For the moment, the only improvements I could think of would be user-accessible commands, and therefore an interface in which the user could, for example, choose when to start the robot's first behaviour and play a less passive role during the execution of the program.
+# Specific link to folders  
+- Here you can find the documentation: [docs](https://github.com/piquet8/exp_ass1/tree/master/docs)
+- Here you can find the diagrams: [diagrams](https://github.com/piquet8/exp_ass1/tree/master/diagrams)
+- Here you can find the screenshots: [screensohts](https://github.com/piquet8/exp_ass1/tree/master/screenshots)
+
 # Authors and contacts
 AUTHOR: Gianluca Piquet
 
