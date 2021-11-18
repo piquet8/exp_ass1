@@ -1,7 +1,7 @@
 # Experimental Robotics Laboratory - Assignment 1
 This project implements a simplified version of the game Cluedo where a robot moves through different rooms looking for hints to find the murderer, the weapon and the location of the crime 
 
-When the robot, once it has collected sufficient hints, finds a complete and consistent hypothesis, it reaches the oracle which knows the winning hypothesis and proposes its judgement
+When the robot, once it has collected sufficient hints, finds a complete and consistent hypothesis, it reaches the oracle (which knows the winning hypothesis) and proposes its judgement
 ## Expected Behaviour
 The robot should:
 - Explore the environment by entering in different rooms
