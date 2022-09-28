@@ -3,7 +3,7 @@
 ## @package exp_ass1
 #
 #  \file hint.py
-#  \brief This program simulate ch
+#  \brief This program simulate the ontology of the game
 #
 #  \author Gianluca Piquet
 #  \version 1.0
